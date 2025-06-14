@@ -25,7 +25,7 @@ setBlog({
 
 const handleSubmit=async (event)=>{
 event.preventDefault()
-const response = await axios.post("`https://blogmanagementsystem-backend.onrender.com/blogs`",blog)
+const response = await axios.post("https://blogmanagementsystem-backend.onrender.com/blogs",blog)
 console.log(response)
 if(response.status == 200){
   alert("Book add bhayo")
