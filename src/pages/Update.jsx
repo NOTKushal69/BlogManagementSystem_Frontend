@@ -11,7 +11,7 @@ const [blog,setBlog]=useState({})
 const {id} =useParams()
 
 const fetchBlog=async()=>{
-  const response=await axios.get(`https://blog-api-backend.onrender.com/blogs/${id}`)
+  const response=await axios.get(`https://blogmanagementsystem-backend.onrender.com/blogs/${id}`)
 setBlog(response.data.dataa)
 }
 console.log(blog)

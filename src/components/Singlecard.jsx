@@ -38,7 +38,7 @@ const SingleCard = ({item}) => {
 
     e.preventDefault();
   navigate("/")
-    const response= await axios.delete("https://your-backend-url.onrender.com/blogs/"+item.id)
+    const response= await axios.delete(`https://blogmanagementsystem-backend.onrender.com/blogs`+item.id)
 
     if (response.status === 200){
       alert("la delete bhayo hai")
