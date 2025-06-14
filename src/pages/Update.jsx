@@ -11,7 +11,7 @@ const [blog,setBlog]=useState({})
 const {id} =useParams()
 
 const fetchBlog=async()=>{
-  const response=await axios.get("http://localhost:3500/blogs/"+id)
+  const response=await axios.get(`https://blog-api-backend.onrender.com/blogs/${id}`)
 setBlog(response.data.dataa)
 }
 console.log(blog)
@@ -27,7 +27,7 @@ setBlog({...blog,
 
 const  handleSubmit=async (event)=>{
   event.preventDefault();
-const response= await axios.patch("http://localhost:3500/blogs/"+id,blog)
+const response= await axios.patch(`https://blog-api-backend.onrender.com/blogs/${id}`,blog)
 if(response.status == 200){
   alert("Blog updated successfully")
 }

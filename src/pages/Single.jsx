@@ -11,7 +11,7 @@ console.log(id)
 
 const [blog,setBlog]=useState({})
 const fetchBook=async () =>{
-  const response=await axios.get("http://localhost:3500/blogs/"+id)
+  const response=await axios.get(`https://blog-api-backend.onrender.com/blogs/${id}`)
   setBlog(response.data.dataa)
 
 }

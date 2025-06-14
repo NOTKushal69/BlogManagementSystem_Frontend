@@ -10,7 +10,7 @@ const Home=()=>{
 const [blog,setBlog]=useState([])
 
 const fetchBlog=async ()=>{
-const response=await axios.get("http://localhost:3500/blogs")
+const response=await axios.get("https://your-backend-url.onrender.com/blogs")
 setBlog(response.data.datas)
 }
 
